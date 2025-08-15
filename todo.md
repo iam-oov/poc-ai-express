@@ -1,4 +1,3 @@
-- migrar a nest
 - eliminar el contenido del index para aquellas paginas:
   - que han sido eliminadas
   - que estan vacias
