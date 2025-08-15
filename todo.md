@@ -1,2 +1,7 @@
 - migrar a nest
+- eliminar el contenido del index para aquellas paginas:
+  - que han sido eliminadas
+  - que estan vacias
+  - que tienen contenido nuevo (para reindexar)
 - conectarse con una base de datos
+- agregar docker

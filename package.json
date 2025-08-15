@@ -1,27 +1,59 @@
 {
   "name": "poc-ai-express",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "dist/main.js",
   "repository": "git@github.com:iam-oov/poc-ai-express.git",
   "author": "osvaldo hinojosa <osvaldo.javier14@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start:dev": "nodemon app.js",
-    "start": "node app.js",
-    "create-index": "node scripts/create-pinecone-index.js",
-    "load-notion-data": "node scripts/load-notion-data.js"
+    "build": "nest build",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "create-index": "ts-node scripts/create-pinecone-index.ts",
+    "load-db": "ts-node scripts/load-notion-data.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/platform-express": "^11.1.6",
+    "@nestjs/swagger": "^11.2.0",
     "@notionhq/client": "^4.0.2",
     "@pinecone-database/pinecone": "^6.1.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
     "dotenv": "^17.2.1",
-    "express": "^5.1.0",
     "joi": "^18.0.0",
-    "langchain": "^0.3.30"
+    "langchain": "^0.3.30",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.33.0",
+    "@nestjs/cli": "^11.0.10",
+    "@nestjs/schematics": "^11.0.7",
+    "@nestjs/testing": "^11.1.6",
+    "@swc/cli": "^0.7.8",
+    "@swc/core": "^1.13.3",
+    "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.0",
+    "@types/supertest": "^6.0.3",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.3.0",
+    "jest": "^30.0.5",
+    "prettier": "^3.6.2",
+    "source-map-support": "^0.5.21",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.1",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.1"
   }
 }
