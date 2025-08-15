@@ -1,0 +1,27 @@
+{
+  "name": "poc-ai-express",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "git@github.com:iam-oov/poc-ai-express.git",
+  "author": "osvaldo hinojosa <osvaldo.javier14@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start:dev": "nodemon app.js",
+    "start": "node app.js",
+    "create-index": "node scripts/create-pinecone-index.js",
+    "load-notion-data": "node scripts/load-notion-data.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@notionhq/client": "^4.0.2",
+    "@pinecone-database/pinecone": "^6.1.2",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "joi": "^18.0.0",
+    "langchain": "^0.3.30"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
