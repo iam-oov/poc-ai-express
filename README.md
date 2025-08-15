@@ -116,7 +116,7 @@ Performs RAG-based question answering using your Notion knowledge base.
 
 ```json
 {
-  "question": "dame un resumen de 50 caracteres de la carta a un tracker"
+  "question": "Que edad tiene Faker ?"
 }
 ```
 
@@ -124,7 +124,9 @@ Performs RAG-based question answering using your Notion knowledge base.
 
 ```json
 {
-  "answer": "TrackChain: Misión para redefinir la logística. ¡Sé parte!\n"
+  "data": {
+    "answer": "Según el contexto, Faker nació el 7 de mayo de 1996. Dado que el texto menciona que ganó el Campeonato Mundial en 2024, podemos inferir que la \"actualidad\" del texto es 2024.\n\nPor lo tanto, en 2024, Faker tiene **28 años**."
+  }
 }
 ```
 
