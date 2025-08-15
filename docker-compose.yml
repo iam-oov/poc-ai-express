@@ -1,0 +1,18 @@
+services:
+  ragapp:
+    image: poc-ragapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: RagApp
+    ports:
+      - '${PORT}:${PORT}'
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      PORT: ${PORT}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+      GEMINI_MODEL: ${GEMINI_MODEL}
+      GEMINI_MODEL_EMBEDDINGS: ${GEMINI_MODEL_EMBEDDINGS}
+      PINECONE_API_KEY: ${PINECONE_API_KEY}
+      PINECONE_INDEX_NAME: ${PINECONE_INDEX_NAME}
+      NOTION_API_KEY: ${NOTION_API_KEY}
