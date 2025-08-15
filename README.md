@@ -84,6 +84,37 @@ yarn start:dev
 
 The server will start on `http://localhost:4000` (or your configured PORT).
 
+## 🐳 Docker Usage
+
+### Using Docker Compose (Recommended)
+
+The easiest way to run the application is using Docker Compose:
+
+```bash
+# Build and start the application
+docker-compose up --build
+
+# Or run in detached mode
+docker-compose up -d --build
+```
+
+The application will be available at `http://localhost:4000` (or your configured PORT).
+
+### Using Docker Commands
+
+You can also use Docker commands directly:
+
+```bash
+# Build the Docker image
+docker build -t poc-ragapp .
+
+# Run the container
+docker run -p 4000:4000 \
+  --env-file .env \
+  --name ragapp \
+  poc-ragapp
+```
+
 ## ⚙️ Configuration
 
 ### Environment Variables
