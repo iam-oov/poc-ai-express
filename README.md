@@ -128,6 +128,8 @@ PORT=4000
 
 # Google Gemini AI
 GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL_EMBEDDINGS=embedding-001
 
 # Pinecone Vector Database
 PINECONE_API_KEY=your_pinecone_api_key_here
@@ -139,7 +141,7 @@ NOTION_API_KEY=your_notion_integration_token
 
 ## ⚙️ API Reference
 
-### POST /rag/question
+### POST [/api/rag/question](http://localhost:4000/api/rag/question)
 
 Performs RAG-based question answering using your Notion knowledge base.
 
