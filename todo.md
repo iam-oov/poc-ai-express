@@ -1,0 +1,2 @@
+- migrar a nest
+- conectarse con una base de datos
